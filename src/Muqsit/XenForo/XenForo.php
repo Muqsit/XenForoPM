@@ -25,8 +25,8 @@ class XenForo extends PluginBase {
     {
         switch (strtolower($cmd->getName())) {
             case 'unsync':
-               if ($this->database["sync-groups"]) $this->unsyncRankWithForum($issuer);
-               else $issuer->sendMessage(TF::RED.'This command has been disabled.');
+                if ($this->database["sync-groups"]) $this->unsyncRankWithForum($issuer);
+                else $issuer->sendMessage(TF::RED.'This command has been disabled.');
                 break;
             case 'myinfo':
                 if ($this->database["self-info"]) {
