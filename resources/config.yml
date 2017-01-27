@@ -1,0 +1,32 @@
+---
+## Your MySQL XenForo database.
+#
+# ip: Your MySQL DB's IP address. You can
+# use a domain (www.google.com) or a
+# numeric IP (123.45.678.90). Format is your
+# choice.
+# 
+# user: Your MySQL DB's username.
+# Please do not use the root user. You may
+# encounter some problems. Try this way:
+# CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+# GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+#
+# password: Your MySQL DB's password.
+#
+# database: The MySQL database you are using to host XenForo. (Your XenForo database).
+#
+# port: Your MySQL DB's port.
+database:
+  ip: forums.cosmicpe.me
+  user: newuser
+  password: password
+  database: forum
+  port: 3306
+
+# Your forum URL. Used when player types an incorrect email-password combination.
+link: forums.cosmicpe.me
+
+# Let players use /myinfo to access their personal forum-synced information in-game.
+self-info: true
+...

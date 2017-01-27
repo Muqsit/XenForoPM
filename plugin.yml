@@ -1,0 +1,18 @@
+name: XenForoPM
+main: Muqsit\XenForo\XenForo
+api: [2.0.0, 3.0.0]
+version: 1.0
+author: Muqsit
+commands:
+  sync:
+    permission: xenforo.command.sync
+    aliases: ["syncaccount"]
+permissions:
+  xenforo:
+    default: op
+    children:
+      xenforo.command:
+        default: op
+        children:
+          xenforo.command.sync:
+            default: true
