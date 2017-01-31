@@ -30,9 +30,9 @@ class XenForo extends PluginBase {
                 break;
             case 'myinfo':
                 if ($this->database["self-info"]) {
-                    $id = $this->database->getIdByCosmicPE($issuer->getName());
+                    $id = $this->database->getIdByIGN($issuer->getName());
                     if ($id !== -1) $this->database->feedUserData($id, $issuer);
-                    else $issuer->sendMessage(TF::YELLOW.'/syncaccount '.TF::GRAY.'[forum e-mail] [forum password]'.PHP_EOL.TF::GRAY.'Link your minecraft character to your forum.cosmicpe.me account.');
+                    else $issuer->sendMessage(TF::YELLOW.'/syncaccount '.TF::GRAY.'[forum e-mail] [forum password]'.PHP_EOL.TF::GRAY.'Link your minecraft character to your ' . $this->config["link"] . ' account.');
                 } else $issuer->sendMessage(TF::RED.'This command has been disabled.');
                 break;
             case 'sync':
